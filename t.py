@@ -31,7 +31,7 @@ class Bot:
             "creatorTargetId": str(config['groupId']),
             "creatorType": "Group"
         }
-        if config['useFileNameAsAssetName']:
+        if config['tryToUseFileNameAsAssetName']:
             filtered = filename.replace('-', ' ').replace('_', ' ').replace('.png', '').replace('.jpg', '').replace('.jpeg', '')
             if filtered.replace(' ', '').isalpha(): # checks if name is fully english
                 item_config['name'] = " ".join(filtered.split())
